@@ -54,6 +54,8 @@ addSlide(
  
  You can use the IntroductionFragment if you just want to customize title, description, image and colors. That's the suggested  approach if you want to create a quick intro:
 
+```kotlin
+
 addSlide(IntroductionFragment.newInstance(
                 "Hotels",
                 "All hotels and hostels are sorted by hospitality rating",
@@ -64,6 +66,7 @@ addSlide(IntroductionFragment.newInstance(
                 titleTypefaceFontRes = R.font.hind_bold,
                 descriptionTypefaceFontRes = R.font.hind_light
             ))
+ ```
 All the parameters are optional, so you're free to customize your slide as you wish.
 
 If you need to programmatically create several slides you can also use the SliderPage class. This class can be passed to IntroductionFragment.newInstance(sliderPage: SliderPage) that will create a new slide starting from that instance.
@@ -72,6 +75,9 @@ If you need to programmatically create several slides you can also use the Slide
 
 If you need further control on the customization of your slide, you can use the IntroductionCustomLayoutFragment. This will allow you pass your custom Layout Resource file:
 
+```kotlin
 IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout1)
+
+```
 
 This allows you to achieve complex layout and include your custom logic in the Introduction.
