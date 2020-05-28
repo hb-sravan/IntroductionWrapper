@@ -81,3 +81,33 @@ IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout
 ```
 
 This allows you to achieve complex layout and include your custom logic in the Introduction.
+
+# Indicators
+
+This lib supports two indicators to show the progress to the user:
+
+* `DotIndicatorController` represented with a list of Dot (the default)
+* `ProgressIndicatorController` represented with a progress bar.
+
+Moreover, you can supply your own indicator by providing an implementation of the `IndicatorController` interface.
+
+You can customize the indicator with the following API on the `AppIntro` class:
+
+```kotlin
+// Toggle Indicator Visibility                
+isIndicatorEnabled = true
+
+// Change Indicator Color 
+setIndicatorColor(
+    selectedIndicatorColor = getColor(R.color.red),
+    unselectedIndicatorColor = getColor(R.color.blue)
+)
+
+// Switch from Dotted Indicator to Progress Indicator
+setProgressIndicator()
+
+// Supply your custom `IndicatorController` implementation
+indicatorController = MyCustomIndicator(/* initialize me */)
+```
+
+If you don't specify any customization, a `DotIndicatorController` will be shown.
