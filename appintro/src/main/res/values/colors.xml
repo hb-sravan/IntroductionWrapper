@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="introduction_statusbar_color">#22000000</color>
+    <color name="introduction_background_color">#222222</color>
+    <color name="introduction_title_color">#FFFFFF</color>
+    <color name="introduction_desc_color">#FFFFFF</color>
+    <color name="introduction_separator_color">#22000000</color>
+    <color name="introduction_bar_color">@android:color/transparent</color>
+    <color name="introduction_default_fab_background_color">#59000000</color>
+    <color name="introduction_icon_tint">#FFFFFF</color>
+    <color name="introduction_default_unselected_color">#22000000</color>
+    <color name="introduction_default_selected_color">#FFFFFF</color>
+    <color name="introduction_navbar_color">#000000</color>
+    <color name="introduction_ripple_color">#1FFFFFFF</color>
+</resources>
