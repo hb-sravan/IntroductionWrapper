@@ -1,12 +1,10 @@
-package com.hb.introductionscreen.paperOnboarding
+package com.hb.introductionscreen
 
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.hb.introductionscreen.HomeActivity
-import com.hb.introductionscreen.R
 import com.hb.introductionscreen.databinding.ActivityPaperOnboardingBinding
 import com.ramotion.paperonboarding.PaperOnboardingEngine
 import com.ramotion.paperonboarding.PaperOnboardingPage

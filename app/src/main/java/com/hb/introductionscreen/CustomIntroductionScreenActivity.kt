@@ -1,13 +1,10 @@
-package com.hb.introductionscreen.normalIntroduction
+package com.hb.introductionscreen
 
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.hb.introduction.IntroductionCustomLayoutFragment
-import com.hb.introduction.IntroductionWithSkipButton
-import com.hb.introductionscreen.HomeActivity
-import com.hb.introductionscreen.R
+import com.hb.introduction.*
 
 class CustomIntroductionScreenActivity : IntroductionWithSkipButton() {
 
@@ -15,15 +12,36 @@ class CustomIntroductionScreenActivity : IntroductionWithSkipButton() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        addSlide(
+            IntroductionLottieAnimationFragment.newInstance(
+                "Hotels",
+                "All hotels and hostels are sorted by hospitality rating",
+                lottieAnimationUrl = "https://assets2.lottiefiles.com/packages/lf20_d2k0co.json",
+                backgroundColor = Color.parseColor("#678FB4"),
+                titleColor = Color.WHITE,
+                descriptionColor = Color.WHITE,
+                titleTypefaceFontRes = R.font.hind_bold,
+                descriptionTypefaceFontRes = R.font.hind_light
+            )
+        )
+
+        addSlide(
+            IntroductionFragment.newInstance(
+                "Banks",
+                "We carefully verify all banks before add them into the app",
+                imageDrawable = R.drawable.banks,
+                backgroundColor = Color.parseColor("#678FB4")
+            )
+        )
+
         addSlide(IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout1))
         addSlide(IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout2))
         addSlide(IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout3))
-        addSlide(IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout4))
 
-        setProgressIndicator()
+
+
         // Change the color of the dot indicator.
         setIndicatorColor(Color.WHITE, Color.BLACK)
-
 
     }
 
@@ -40,3 +58,5 @@ class CustomIntroductionScreenActivity : IntroductionWithSkipButton() {
     }
 
 }
+
+

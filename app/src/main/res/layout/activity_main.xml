@@ -40,6 +40,38 @@
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/_15sdp" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/lottieAnimationIntroButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageAndTitleIntroButton"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/_15sdp"
+            android:text="Lottie Animation Introduction"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_15sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/customIntroButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lottieAnimationIntroButton"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/_15sdp"
+            android:text="Customized Introduction"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_15sdp" />
+
 
     </RelativeLayout>
 

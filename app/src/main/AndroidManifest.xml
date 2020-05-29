@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.hb.introductionscreen">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,22 +22,24 @@
         </activity>
 
         <activity
-            android:name=".paperOnboarding.PaperOnBoardingActivity"
+            android:name=".PaperOnBoardingActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+
+        <activity
+            android:name=".IntroductionScreenActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+
+
+        <activity
+            android:name=".LAIntroductionScreenActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
 
         <activity
-            android:name=".NormalIntroductionActivity"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
-
-        <activity
-            android:name=".normalIntroduction.DefaultIntroductionScreenActivity"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
-
-        <activity
-            android:name=".normalIntroduction.CustomIntroductionScreenActivity"
+            android:name=".CustomIntroductionScreenActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
 

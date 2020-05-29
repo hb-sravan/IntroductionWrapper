@@ -55,7 +55,7 @@ abstract class IntroductionBaseActivity : AppCompatActivity(), IntroductionViewP
             indicatorContainer.isVisible = value
         }
 
-    protected var isSystemBackButtonLocked = false
+    protected var isSystemBackButtonLocked = true
 
     protected var isColorTransitionsEnabled = false
 

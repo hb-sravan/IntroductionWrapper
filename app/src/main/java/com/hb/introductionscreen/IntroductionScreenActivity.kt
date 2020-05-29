@@ -1,4 +1,4 @@
-package com.hb.introductionscreen.normalIntroduction
+package com.hb.introductionscreen
 
 import android.content.Intent
 import android.graphics.Color
@@ -6,10 +6,8 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.hb.introduction.IntroductionWithSkipText
 import com.hb.introduction.IntroductionFragment
-import com.hb.introductionscreen.HomeActivity
-import com.hb.introductionscreen.R
 
-class DefaultIntroductionScreenActivity : IntroductionWithSkipText() {
+class IntroductionScreenActivity : IntroductionWithSkipText() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
