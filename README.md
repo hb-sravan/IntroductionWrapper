@@ -10,10 +10,10 @@ This is an Android Library that helps you build introduction for your App. With 
   
 | Name | Preview |
 | ---: | :-----: |
-| Paper Onboarding | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/paper_onboarding.gif" alt="Paper Onboarding" height="50% "width="50%"/> |
-| Normal Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/nomal_introduction.gif" alt="Normal Introduction" height="50% width="50%"/> |
-| Lottie Animation Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/lottie_introduction.gif" alt="Lottie Animation Introduction" height="50% width="50%"/> |
-| Customized Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/custom.gif" alt="Customized Introduction" height="50% width="50%"/> |
+| Paper Onboarding | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/paper_onboarding.gif" alt="Paper Onboarding" "width="50%"/> |
+| Normal Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/nomal_introduction.gif" alt="Normal Introduction" width="50%"/> |
+| Lottie Animation Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/lottie_introduction.gif" alt="Lottie Animation Introduction" width="50%"/> |
+| Customized Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/custom.gif" alt="Customized Introduction" width="50%"/> |
 
 
 # Use Case
