@@ -70,6 +70,23 @@ val engine = PaperOnboardingEngine(
         return elements
     }
   ```
+  
+  # PaperOnboardingPage
+ 
+ You can use the PaperOnboardingPage if you just want to customize title, description, image. That's the suggested  approach if you want to create a quick intro:
+
+```kotlin
+
+ // prepare data
+        val scr1 = PaperOnboardingPage(
+            "Hotels", // Title text
+            "All hotels and hostels are sorted by hospitality rating", // Description text
+            Color.parseColor("#678FB4"), // Background color
+            R.drawable.hotels, // Main image drawable
+            R.drawable.key // Indicator image
+        )
+ ```
+You're free to customize your onboarding page as you wish.
 
 # Normal Introduction
 
