@@ -225,7 +225,8 @@ Here *introduction_custom_layout1* is a layout which can created by developer by
 This allows you to achieve complex layout and include your custom logic in the Introduction.
 
 # Customized Introduction 
-    We can add any of the above slide - IntroductionLottieAnimationFragment ,IntroductionFragment, IntroductionCustomLayoutFragment or mix of all three like below
+
+We can add any of the above slide - IntroductionLottieAnimationFragment ,IntroductionFragment, IntroductionCustomLayoutFragment or mix of all three like below
 
 ```kotlin
 addSlide(
