@@ -220,8 +220,39 @@ If you need further control on the customization of your slide, you can use the 
 IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout1)
 
 ```
+Here *introduction_custom_layout1* is a layout which can created by developer by his/her own
 
 This allows you to achieve complex layout and include your custom logic in the Introduction.
+
+# Customized Introduction - We can add any of the above slide - IntroductionLottieAnimationFragment ,IntroductionFragment ,IntroductionCustomLayoutFragment or mix of all three like below
+
+```kotlin
+addSlide(
+            IntroductionLottieAnimationFragment.newInstance(
+                "Hotels",
+                "All hotels and hostels are sorted by hospitality rating",
+                lottieAnimationUrl = "https://assets2.lottiefiles.com/packages/lf20_d2k0co.json",
+                backgroundColor = Color.parseColor("#678FB4"),
+                titleColor = Color.WHITE,
+                descriptionColor = Color.WHITE,
+                titleTypefaceFontRes = R.font.hind_bold,
+                descriptionTypefaceFontRes = R.font.hind_light
+            )
+        )
+
+        addSlide(
+            IntroductionFragment.newInstance(
+                "Banks",
+                "We carefully verify all banks before add them into the app",
+                imageDrawable = R.drawable.banks,
+                backgroundColor = Color.parseColor("#678FB4")
+            )
+        )
+
+        addSlide(IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout1))
+        addSlide(IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout2))
+        addSlide(IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout3))
+  ```
 
 # Indicators
 
