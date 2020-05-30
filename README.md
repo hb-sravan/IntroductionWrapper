@@ -4,6 +4,10 @@
 
 This is an Android Library that helps you build introduction for your App. With this help you create a great onboarding experience.
 
+<p align="center">
+<img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/device-2020-05-30-112844.png" width = "400" height = "711"  class="center"/>
+  </p>
+
 # Use Case
 1. If you want to show some introduction with number of slides/pages in your application then this library is very useful
 2. This library is providing you number of options to create app introduction or paper onboarding type
