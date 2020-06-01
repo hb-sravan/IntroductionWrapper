@@ -342,15 +342,11 @@ And we can change the skip , next and button resources as well
 When user click on skip or done button following callbacks method will get invoke in Activity
 
 ```kotlin
-public override fun onSkipPressed(currentFragment: Fragment?) {
+   public override fun onSkipPressed(currentFragment: Fragment?) {
         super.onSkipPressed(currentFragment)
-        startActivity(Intent(this, HomeActivity::class.java))
-        finish()
     }
 
     public override fun onDonePressed(currentFragment: Fragment?) {
         super.onDonePressed(currentFragment)
-        startActivity(Intent(this, HomeActivity::class.java))
-        finish()
     }
 ```
