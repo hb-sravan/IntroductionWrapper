@@ -71,7 +71,10 @@ addSlide(
         )
  ```
  
-Here each slide is one page in viewpager and `addSlide` is the method which comes from IntroductionBaseActivity() which is used to add our IntroductionFragment to the view pager
+Here each slide is one page in viewpager and `addSlide` is the method which comes from `IntroductionBaseActivity()` which is used to add our `IntroductionFragment` to the view pager
+
+`IntroductionWithSkipText()` - Is a base class with skip ,next and done buttons will have Text
+`IntroductionWithSkipButton()` - Is a base class with skip ,next and done buttons will have Button Drawables
  
  # IntroductionFragment
  
