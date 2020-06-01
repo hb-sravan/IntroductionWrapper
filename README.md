@@ -4,7 +4,7 @@
 
 This is an Android Library that helps you build introduction for your App. With this help you create a great onboarding experience.
 
-<img alt="RecyclerView Adapter Library" title="Paper Onboarding" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/paper_onboard.gif" width = "300" height = "633"/>&nbsp;<h1>Normal Introduction</h1><img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/nomal_introduction.gif" width="300" height = "633"/>&nbsp;<h1>Lottie Animation Introduction</h1><img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/lottie_introduction.gif" width="300" height
+<img alt="RecyclerView Adapter Library" title="Paper Onboarding" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/paper_onboard.gif" width = "300" height = "633"/>&nbsp;<img alt="RecyclerView Adapter Library" title="Normal Introduction" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/nomal_introduction.gif" width="300" height = "633"/>&nbsp;<h1>Lottie Animation Introduction</h1><img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/lottie_introduction.gif" width="300" height
 ="633">&nbsp;<h1>Customized Introduction</h1><img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/custom.gif" width="300" height="633">
 
 # Use Case
