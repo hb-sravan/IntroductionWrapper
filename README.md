@@ -4,9 +4,14 @@
 
 This is an Android Library that helps you build introduction for your App. With this help you create a great onboarding experience.
 
-<p align="center">
-<img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/device-2020-05-30-112844.png" width = "400" height = "711"  class="center"/>
-  </p>
+ 
+| Name | Preview |
+| ---: | :-----: |
+| Paper Onboarding | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/paper_onboarding.gif" alt="Paper Onboarding" width="50%"/> |
+| Normal Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/nomal_introduction.gif" alt="Normal Introduction" width="50%"/> |
+| Lottie Animation Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/lottie_introduction.gif" alt="Lottie Animation Introduction" width="50%"/> |
+| Customized Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/custom.gif" alt="Customized Introduction" width="50%"/> |
+
 
 # Use Case
 1. If you want to show some introduction with number of slides/pages in your application then this library is very useful
@@ -46,48 +51,93 @@ val engine = PaperOnboardingEngine(
             R.drawable.key // Indicator image
         )
 
-        val scr2 = PaperOnboardingPage(
-            "Banks",
-            "We carefully verify all banks before add them into the app",
-            Color.parseColor("#65B0B4"),
-            R.drawable.banks,
-            R.drawable.wallet
-        )
-
-        val scr3 = PaperOnboardingPage(
-            "Stores",
-            "All local stores are categorized for your convenience",
-            Color.parseColor("#9B90BC"),
-            R.drawable.stores,
-            R.drawable.shopping_cart
-        )
-
         val elements =
             ArrayList<PaperOnboardingPage>()
         elements.add(scr1) // Add Scree1 to Paper Onboarding
-        elements.add(scr2) // Add Scree1 to Paper Onboarding
-        elements.add(scr3) // Add Scree1 to Paper Onboarding
         return elements
     }
   ```
-  
-  # PaperOnboardingPage
+ # Layout file will be like this
  
- You can use the PaperOnboardingPage if you just want to customize title, description, image. That's the suggested  approach if you want to create a quick intro:
+ ``` xml
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    tools:context=".MainActivity">
 
-```kotlin
 
- // prepare data
-        val scr1 = PaperOnboardingPage(
-            "Hotels", // Title text
-            "All hotels and hostels are sorted by hospitality rating", // Description text
-            Color.parseColor("#678FB4"), // Background color
-            R.drawable.hotels, // Main image drawable
-            R.drawable.key // Indicator image
-        )
- ```
-You're free to customize your onboarding page as you wish.
+    <RelativeLayout
+        android:id="@+id/onboardingRootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <!-- BG COLORS CONTAINER -->
+        <FrameLayout
+            android:id="@+id/onboardingBackgroundContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- MAIN LAYOUT SECTION -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="65dp"
+            android:animateLayoutChanges="true"
+            android:clipChildren="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <!-- ICON CONTAINER -->
+                <FrameLayout
+                    android:id="@+id/onboardingContentIconContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:clipChildren="false"
+                    android:clipToPadding="false" />
+
+                <!-- TEXT CONTAINER -->
+                <FrameLayout
+                    android:id="@+id/onboardingContentTextContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- PAGER ICONS CONTAINER -->
+        <LinearLayout
+            android:id="@+id/onboardingPagerIconsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="25dp"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" />
+
+
+    </RelativeLayout>
+
+
+</layout>
+```
+  
 # Normal Introduction
 
 In our Activity onCreate method we can add the introduction pages as slides like below
@@ -105,32 +155,13 @@ addSlide(
                 descriptionTypefaceFontRes = R.font.hind_light
             )
         )
-
-        addSlide(
-            IntroductionFragment.newInstance(
-                "Banks",
-                "We carefully verify all banks before add them into the app",
-                imageDrawable = R.drawable.banks,
-                backgroundColor = Color.parseColor("#678FB4")
-            )
-        )
-
-        addSlide(
-            IntroductionFragment.newInstance(
-                "Stores",
-                "All local stores are categorized for your convenience",
-                imageDrawable = R.drawable.stores,
-                backgroundColor = Color.parseColor("#678FB4")
-            )
-        )
-        
  ```
  
  Here each slide is one page in viewpager
  
  # IntroductionFragment
  
- You can use the IntroductionFragment if you just want to customize title, description, image and colors. That's the suggested  approach if you want to create a quick intro:
+You can use the IntroductionFragment if you just want to customize title, description, image and colors. That's the suggested  approach if you want to create a quick intro:
 
 ```kotlin
 
@@ -168,30 +199,14 @@ addSlide(
                 descriptionTypefaceFontRes = R.font.hind_light
             )
         )
-
-        addSlide(
-            IntroductionLottieAnimationFragment.newInstance(
-                "Loading",
-                lottieAnimationUrl = "https://assets10.lottiefiles.com/packages/lf20_gwBIWJ.json",
-                backgroundColor = Color.parseColor("#678FB4")
-            )
-        )
-
-        addSlide(
-            IntroductionLottieAnimationFragment.newInstance(
-                "Mountains",
-                lottieAnimationResource = R.raw.mountain,
-                backgroundColor = Color.parseColor("#678FB4")
-            )
-        )
-        
+               
  ```
  
  Here each slide is one page in viewpager
  
  # IntroductionLottieAnimationFragment
  
- You can use the IntroductionLottieAnimationFragment if you just want to customize title, description, animation and colors. That's the suggested  approach if you want to create a quick intro:
+You can use the IntroductionLottieAnimationFragment if you just want to customize title, description, animation and colors. That's the suggested  approach if you want to create a quick intro:
 
 ```kotlin
 
@@ -252,8 +267,6 @@ addSlide(
         )
 
         addSlide(IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout1))
-        addSlide(IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout2))
-        addSlide(IntroductionCustomLayoutFragment.newInstance(R.layout.introduction_custom_layout3))
   ```
 
 # Indicators
