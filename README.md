@@ -15,6 +15,10 @@ This is an Android Library that helps you build introduction for your App. With 
 
 # Paper onboarding
 
+# Dependency
+
+`implementation 'com.ramotion.paperonboarding:paper-onboarding:1.1.3'`
+
 In our Activity onCreate method initialise `PaperOnboardingEngine` and set listeners
 
 ```kotlin
@@ -29,14 +33,14 @@ val engine = PaperOnboardingEngine(
         }
 
         engine.setOnRightOutListener { // This action will call when last pagr is slide
-            startActivity(Intent(this, HomeActivity::class.java))
-            finish()
+            
         }
   ```
   
+  Use `PaperOnboardingPage` to create page for paper onboarding
+  
   ```kotlin
-  private fun getDataForOnboarding(): ArrayList<PaperOnboardingPage>? {
-        // prepare data
+ 
         val scr1 = PaperOnboardingPage(
             "Hotels", // Title text
             "All hotels and hostels are sorted by hospitality rating", // Description text
@@ -47,9 +51,9 @@ val engine = PaperOnboardingEngine(
 
         val elements =
             ArrayList<PaperOnboardingPage>()
-        elements.add(scr1) // Add Scree1 to Paper Onboarding
-        return elements
-    }
+        elements.add(scr1) // Add Scree1 to Paper Onboarding - This val elements will be sent back to getDataForOnboarding() method in the intialization
+        
+    
   ```
   
 # Normal Introduction
