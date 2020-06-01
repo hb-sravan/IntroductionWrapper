@@ -4,6 +4,7 @@
 
 This is an Android Library that helps you build introduction for your App. With this help you create a great onboarding experience.
 
+<h1>The img element</h1>
 <img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/paper_onboard.gif" width = "300" height = "633"/>&nbsp;<img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/nomal_introduction.gif" width="300" height = "633"/>&nbsp;<img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/lottie_introduction.gif" width="300" height
 ="633">&nbsp;<img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/custom.gif" width="300" height="633">
 
