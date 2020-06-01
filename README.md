@@ -51,90 +51,10 @@ val engine = PaperOnboardingEngine(
         return elements
     }
   ```
- # Layout file will be like this
- 
- ``` xml
-<?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorWhite"
-    tools:context=".MainActivity">
-
-
-    <RelativeLayout
-        android:id="@+id/onboardingRootView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <!-- BG COLORS CONTAINER -->
-        <FrameLayout
-            android:id="@+id/onboardingBackgroundContainer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <!-- MAIN LAYOUT SECTION -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="65dp"
-            android:animateLayoutChanges="true"
-            android:clipChildren="false">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:orientation="vertical">
-
-                <!-- ICON CONTAINER -->
-                <FrameLayout
-                    android:id="@+id/onboardingContentIconContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:clipChildren="false"
-                    android:clipToPadding="false" />
-
-                <!-- TEXT CONTAINER -->
-                <FrameLayout
-                    android:id="@+id/onboardingContentTextContainer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="30dp"
-                    android:clipChildren="false"
-                    android:clipToPadding="false" />
-
-            </LinearLayout>
-
-        </RelativeLayout>
-
-        <!-- PAGER ICONS CONTAINER -->
-        <LinearLayout
-            android:id="@+id/onboardingPagerIconsContainer"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center_horizontal|bottom"
-            android:layout_marginBottom="25dp"
-            android:baselineAligned="false"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" />
-
-
-    </RelativeLayout>
-
-
-</layout>
-```
   
 # Normal Introduction
 
-In our Activity onCreate method we can add the introduction pages as slides like below
+In our Activity (Which extends `IntroductionWithSkipText()` or `IntroductionWithSkipButton()` based upon our requirement) onCreate method we can add the introduction pages as slides like below 
 
 ```kotlin
 addSlide(
@@ -151,7 +71,7 @@ addSlide(
         )
  ```
  
- Here each slide is one page in viewpager
+Here each slide is one page in viewpager and `addSlide` is the method which comes from IntroductionBaseActivity() which is used to add our IntroductionFragment to the view pager
  
  # IntroductionFragment
  
@@ -178,7 +98,7 @@ If you need to programmatically create several slides you can also use the Slide
 
 # Lottie Animation Introduction
 
-In our Activity onCreate method we can add the introduction pages as slides like below
+In our Activity (Which extends `IntroductionWithSkipText()` or `IntroductionWithSkipButton()` based upon our requirement) onCreate method we can add the introduction pages as slides like below
 
 ```kotlin
 addSlide(
@@ -298,34 +218,31 @@ We can customize the skip , next and button options in the library
 ```kotlin
 
 /**
-     * Override skip text
+     * Override skip text - Is used to update the skip button text
      *
      * @param text your text
      */
     fun setSkipText(text: CharSequence?) {
-        val skipText = findViewById<TextView>(R.id.skip)
-        skipText.text = text
+        
     }
 
 
     /**
-     * Override skip text typeface
+     * Override skip text typeface - Is used to update the skip button text font
      *
      * @param typeface the typeface to apply to Skip button
      */
     fun setSkipTextTypeface(@FontRes typeface: Int) {
-        val view = findViewById<TextView>(R.id.skip)
-        TypefaceContainer(null, typeface).applyTo(view)
+        
     }
 
     /**
-     * Override skip button color
+     * Override skip button color - Is used to update the skip button text color
      *
      * @param colorSkipButton your color resource
      */
     fun setSkipTextColor(@ColorInt colorSkipButton: Int) {
-        val skip = findViewById<TextView>(R.id.skip)
-        skip.setTextColor(colorSkipButton)
+        
     }
 
 
@@ -334,33 +251,30 @@ We can customize the skip , next and button options in the library
 
 
     /**
-     * Override done text
+     * Override done text - Is used to update the Done button text
      *
      * @param text your text
      */
     fun setDoneText(text: CharSequence?) {
-        val doneText = findViewById<TextView>(R.id.done)
-        doneText.text = text
+        
     }
 
     /**
-     * Override done text typeface
+     * Override done text typeface - Is used to update the Done button text font
      *
      * @param typeface the typeface to apply to Done button
      */
     fun setDoneTextTypeface(@FontRes typeface: Int) {
-        val view = findViewById<TextView>(R.id.done)
-        TypefaceContainer(null, typeface).applyTo(view)
+        
     }
 
     /**
-     * Override done button text color
+     * Override done button text color - Is used to update the Done button text color
      *
      * @param colorDoneText your color resource
      */
     fun setDoneTextColor(@ColorInt colorDoneText: Int) {
-        val doneText = findViewById<TextView>(R.id.done)
-        doneText.setTextColor(colorDoneText)
+       
     }
 
 
@@ -368,33 +282,30 @@ We can customize the skip , next and button options in the library
 
 
     /**
-     * Override done text
+     * Override next text - Is used to update the Next button text 
      *
      * @param text your text
      */
     fun setNextText(text: CharSequence?) {
-        val nextText = findViewById<TextView>(R.id.next)
-        nextText.text = text
+        
     }
 
     /**
-     * Override done text typeface
+     * Override next text typeface - Is used to update the Next button text font
      *
      * @param typeface the typeface to apply to Done button
      */
     fun setNextTextTypeface(@FontRes typeface: Int) {
-        val view = findViewById<TextView>(R.id.next)
-        TypefaceContainer(null, typeface).applyTo(view)
+       
     }
 
     /**
-     * Override done button text color
+     * Override done button text color - Is used to update the Next button text color
      *
      * @param colorNextText your color resource
      */
     fun setNextTextColor(@ColorInt colorNextText: Int) {
-        val nextText = findViewById<TextView>(R.id.next)
-        nextText.setTextColor(colorNextText)
+        
     }
 ```
 
@@ -403,28 +314,25 @@ And we can change the skip , next and button resources as well
 ```kotlin
 
 /**
-     * Override Skip button drawable
+     * Override Skip button drawable - Is used to update the Skip button drawable
      * @param imageSkipButton your drawable resource
      */
     fun setImageSkipButton(imageSkipButton: Drawable) {
-        skipImageButton.setImageDrawable(imageSkipButton)
     }
 
     /**
-     * Override Next button drawable
+     * Override Next button drawable - Is used to update the Next button drawable
      * @param imageNextButton your drawable resource
      */
     fun setImageNextButton(imageNextButton: Drawable) {
-        nextImageButton.setImageDrawable(imageNextButton)
     }
 
 
     /**
-     * Override Done button drawable
+     * Override Done button drawable  - Is used to update the Done button drawable
      * @param imageDoneButton your drawable resource
      */
     fun setImageDoneButton(imageDoneButton: Drawable) {
-        doneImageButton.setImageDrawable(imageDoneButton)
     }
 ```
 
