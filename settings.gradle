@@ -1,2 +1,2 @@
 rootProject.name='IntroductionScreen'
-include ':app','paper-onboarding','appintro'
+include ':app','appintro'
