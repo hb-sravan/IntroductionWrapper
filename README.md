@@ -4,7 +4,8 @@
 
 This is an Android Library that helps you build introduction for your App. With this help you create a great onboarding experience.
 
-| Paper Onboarding | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/paper_onboard.gif" alt="Paper Onboarding" width="50%"/> |
+Paper Onboarding 
+<img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/paper_onboard.gif" alt="Paper Onboarding" width="50%"/> &nbsp;
 
 | Normal Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/nomal_introduction.gif" alt="Normal Introduction" width="50%"/> |
 
