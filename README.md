@@ -19,7 +19,7 @@ This is an Android Library that helps you build introduction for your App. With 
 
 `implementation 'com.ramotion.paperonboarding:paper-onboarding:1.1.3'`
 
-In our Activity onCreate method initialise `PaperOnboardingEngine` and set listeners
+In our Activity onCreate method initialize `PaperOnboardingEngine` and set listeners
 
 ```kotlin
 val engine = PaperOnboardingEngine(
