@@ -4,8 +4,14 @@
 
 This is an Android Library that helps you build introduction for your App. With this help you create a great onboarding experience.
 
-<img alt="RecyclerView Adapter Library" title="Paper Onboarding" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/paper_onboard.gif" width = "300" height = "633"/>&nbsp;<img alt="RecyclerView Adapter Library" title="Normal Introduction" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/nomal_introduction.gif" width="300" height = "633"/>&nbsp;<h1>Lottie Animation Introduction</h1><img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/lottie_introduction.gif" width="300" height
-="633">&nbsp;<h1>Customized Introduction</h1><img alt="RecyclerView Adapter Library" src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/custom.gif" width="300" height="633">
+| ---: | :-----: |
+| Paper Onboarding | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/paper_onboard.gif" alt="Paper Onboarding" width="50%"/> |
+| ---: | :-----: |
+| Normal Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/nomal_introduction.gif" alt="Normal Introduction" width="50%"/> |
+| ---: | :-----: |
+| Lottie Animation Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/lottie_introduction.gif" alt="Lottie Animation Introduction" width="50%"/> |
+| ---: | :-----: |
+| Customized Introduction | <img src="https://github.com/hbgopikrishna/IntroductionWrapper/blob/master/custom.gif" alt="Customized Introduction" width="50%"/> |
 
 # Use Case
 1. If you want to show some introduction with number of slides/pages in your application then this library is very useful
