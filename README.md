@@ -36,7 +36,9 @@ val engine = PaperOnboardingEngine(
             
         }
   ```
-  // Just example data for Onboarding
+  In `getDataForOnboarding` method will add data for pages and return elements to intiallization
+  
+  ```kotlin
     private fun getDataForOnboarding(): ArrayList<PaperOnboardingPage>? {
         // prepare data
         val scr1 = PaperOnboardingPage(
@@ -55,21 +57,14 @@ val engine = PaperOnboardingEngine(
             R.drawable.wallet
         )
 
-        val scr3 = PaperOnboardingPage(
-            "Stores",
-            "All local stores are categorized for your convenience",
-            Color.parseColor("#9B90BC"),
-            R.drawable.stores,
-            R.drawable.shopping_cart
-        )
 
         val elements =
             ArrayList<PaperOnboardingPage>()
         elements.add(scr1)
         elements.add(scr2)
-        elements.add(scr3)
         return elements
     }
+  ```
   
   Use `PaperOnboardingPage` to create page for paper onboarding
   
@@ -82,11 +77,6 @@ val engine = PaperOnboardingEngine(
             R.drawable.hotels, // Main image drawable
             R.drawable.key // Indicator image
         )
-
-        val elements =
-            ArrayList<PaperOnboardingPage>()
-        elements.add(scr1) // Add Scree1 to Paper Onboarding - This val elements will be sent back to getDataForOnboarding() method in the intialization
-        
     
   ```
   
