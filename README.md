@@ -15,12 +15,12 @@ This is an Android Library that helps you build introduction for your App. With 
 
 # Paper onboarding
 
-In our Activity onCreate method 
+In our Activity onCreate method initialise `PaperOnboardingEngine` and set listeners
 
 ```kotlin
 val engine = PaperOnboardingEngine(
             findViewById(R.id.onboardingRootView),
-            getDataForOnboarding(),
+            getDataForOnboarding(), // Set OnBoard Pages using PaperOnboardingPage class
             applicationContext
         )
 
